@@ -1,1 +1,1 @@
-# Boilerplate from React Components
+# Компонент "Православный календарь" на React.js
