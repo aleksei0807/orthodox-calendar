@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { decode } from './utils/htmlentity';
+import fetch from 'isomorphic-fetch';
 
 export default class OrthodoxCalendar extends Component {
 	constructor() {
@@ -17,7 +18,7 @@ export default class OrthodoxCalendar extends Component {
 	}
 
 	componentDidMount() {
-		
+
 	}
 
     render() {
