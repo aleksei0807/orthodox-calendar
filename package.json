@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src --out-dir lib && webpack && cd ./examples/ && webpack && cd ../ && gulp",
-	"watch-styles": "gulp watch",
-	"watch-examples": "cd ./examples/ && webpack --watch"
+    "watch-styles": "gulp watch",
+    "watch-examples": "cd ./examples/ && webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/aleksei0807/react-components-boilerplate#readme",
   "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
     "react": "^15.0.2"
   },
   "devDependencies": {
