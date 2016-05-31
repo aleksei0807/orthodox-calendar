@@ -14,9 +14,12 @@
     "url": "git+https://github.com/aleksei0807/react-components-boilerplate.git"
   },
   "keywords": [
-    "boilerplate",
+    "orthodox",
+	"calendar",
     "react",
-    "components"
+    "component",
+	"православный",
+	"календарь"
   ],
   "author": "Aleksei Schurak",
   "license": "MIT",
