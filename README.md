@@ -1,5 +1,7 @@
 # Компонент "Православный календарь" на React.js
 
+Демо: [http://aleksei0807.github.io/orthodox-calendar/](http://aleksei0807.github.io/orthodox-calendar/)
+
 [![NPM](https://nodei.co/npm/orthodox-calendar.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/orthodox-calendar/)
 
 # Инструкция по использованию
