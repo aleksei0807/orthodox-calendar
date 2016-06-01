@@ -57,4 +57,5 @@ export default class MyComponent extends Component {
 - `trapeza_img` {boolean} default `false`
 - `para` {boolean} default `true`
 - `chten` {boolean} default `true`
-- `loading` = {string | React Component} default `"Загрузка..."`
+- `loading` {string | React Component} default `"Загрузка..."`
+- `server` {string} default 'http://localhost:3333' (путь к серверу)
