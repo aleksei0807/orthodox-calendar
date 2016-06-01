@@ -20390,9 +20390,11 @@
 			value: function componentDidMount() {
 				var _this2 = this;
 
-				var url = 'http://localhost:3333';
+				var _props$server = this.props.server;
+				var server = _props$server === undefined ? 'http://localhost:3333' : _props$server;
 
-				(0, _isomorphicFetch2.default)(url).then(function (response) {
+
+				(0, _isomorphicFetch2.default)(server).then(function (response) {
 					return response.json();
 				}).then(function (moduleData) {
 					_this2.setState({

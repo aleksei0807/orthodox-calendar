@@ -18,9 +18,9 @@ export default class OrthodoxCalendar extends Component {
 	}
 
 	componentDidMount() {
-		let url = 'http://localhost:3333';
+		const { server = 'http://localhost:3333' } = this.props;
 
-		fetch(url)
+		fetch(server)
 			.then(response => response.json())
 			.then(moduleData => {
 				this.setState({
