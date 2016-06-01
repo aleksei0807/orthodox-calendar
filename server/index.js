@@ -2,6 +2,7 @@
 
 const http = require('http');
 const PHPUnserialize = require('php-unserialize');
+let port = process.env.PORT || 3333;
 
 http.createServer((req, res) => {
 
@@ -26,4 +27,4 @@ http.createServer((req, res) => {
 
 	http.request(options, callback).end();
 
-}).listen(3333);
+}).listen(port);
