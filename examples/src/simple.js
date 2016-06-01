@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CustomComponent from '../../lib/index';
+import OrthodoxCalendar from '../../lib/index';
 
 ReactDOM.render(
-	<CustomComponent />,
+	<OrthodoxCalendar />,
 	document.getElementById('root')
 );

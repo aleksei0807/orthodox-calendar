@@ -3,8 +3,8 @@ const webpack = require('webpack');
 module.exports = {
     entry: {
         'index': "./src/index.js",
-		'default': "./src/default.js",
-		'custom': "./src/custom.js"
+		'simple': "./src/simple.js",
+		'complex': "./src/complex.js"
     },
 
 	output: {

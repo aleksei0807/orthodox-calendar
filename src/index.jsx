@@ -35,15 +35,34 @@ export default class OrthodoxCalendar extends Component {
     render() {
 		const moduleData = this.state.moduleData;
 
+		const {
+			day = true,
+			dayicon = false,
+			ned = true,
+			trapeza_txt = true,
+			trapeza_img = false,
+			para = true,
+			chten = true
+		} = this.props;
+
         return (
             <div className="orthodox-calendar">
-				{moduleData.day ? <span className="orthodox-calendar__day" dangerouslySetInnerHTML={this.createMarkup(decode(moduleData.day))} /> : null}
-				{moduleData.ned ? <span className="orthodox-calendar__ned" dangerouslySetInnerHTML={this.createMarkup(decode(moduleData.ned))} /> : null}
-				{moduleData.trapeza_txt ? <span className="calendar__trapeza-txt" dangerouslySetInnerHTML={this.createMarkup(decode(moduleData.trapeza_txt))} /> : null}
+				{(moduleData.dayicon && dayicon) ? <span className="orthodox-calendar__dayicon" dangerouslySetInnerHTML={this.createMarkup(decode(moduleData.dayicon))} /> : null}
+
+				{(moduleData.day && day) ? <span className="orthodox-calendar__day" dangerouslySetInnerHTML={this.createMarkup(decode(moduleData.day))} /> : null}
+
+				{(moduleData.ned && ned) ? <span className="orthodox-calendar__ned" dangerouslySetInnerHTML={this.createMarkup(decode(moduleData.ned))} /> : null}
+
+				{(moduleData.trapeza_img && trapeza_img) ? <span className="calendar__trapeza_img" dangerouslySetInnerHTML={this.createMarkup(decode(moduleData.trapeza_img))} /> : null}
+
+				{(moduleData.trapeza_txt && trapeza_txt) ? <span className="calendar__trapeza-txt" dangerouslySetInnerHTML={this.createMarkup(decode(moduleData.trapeza_txt))} /> : null}
+
 				<div>
-					{moduleData.para ? <div className="orthodox-calendar__para" dangerouslySetInnerHTML={this.createMarkup(decode(moduleData.para))} /> : null}
-					{moduleData.chten ? <div className="orthodox-calendar__chten" dangerouslySetInnerHTML={this.createMarkup(decode(moduleData.chten))} /> : null}
+					{(moduleData.para && para) ? <div className="orthodox-calendar__para" dangerouslySetInnerHTML={this.createMarkup(decode(moduleData.para))} /> : null}
+
+					{(moduleData.chten && chten) ? <div className="orthodox-calendar__chten" dangerouslySetInnerHTML={this.createMarkup(decode(moduleData.chten))} /> : null}
 				</div>
+
 			</div>
         );
     }
