@@ -81,7 +81,7 @@
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(OrthodoxCalendar).call(this));
 
 			_this.state = {
-				moduleData: {}
+				moduleData: null
 			};
 			return _this;
 		}
@@ -113,7 +113,7 @@
 		}, {
 			key: 'render',
 			value: function render() {
-				var moduleData = this.state.moduleData;
+				var moduleData = this.state.moduleData || {};
 
 				var _props = this.props;
 				var _props$day = _props.day;
@@ -130,19 +130,31 @@
 				var para = _props$para === undefined ? true : _props$para;
 				var _props$chten = _props.chten;
 				var chten = _props$chten === undefined ? true : _props$chten;
+				var _props$loading = _props.loading;
+				var loading = _props$loading === undefined ? "Загрузка..." : _props$loading;
 
 
 				return _react2.default.createElement(
 					'div',
 					{ className: 'orthodox-calendar' },
-					moduleData.dayicon && dayicon ? _react2.default.createElement('span', { className: 'orthodox-calendar__dayicon', dangerouslySetInnerHTML: this.createMarkup((0, _htmlentity.decode)(moduleData.dayicon)) }) : null,
+					this.state.moduleData === null ? _react2.default.createElement(
+						'div',
+						{ className: 'orthodox-calendar__loading' },
+						loading
+					) : null,
 					moduleData.day && day ? _react2.default.createElement('span', { className: 'orthodox-calendar__day', dangerouslySetInnerHTML: this.createMarkup((0, _htmlentity.decode)(moduleData.day)) }) : null,
 					moduleData.ned && ned ? _react2.default.createElement('span', { className: 'orthodox-calendar__ned', dangerouslySetInnerHTML: this.createMarkup((0, _htmlentity.decode)(moduleData.ned)) }) : null,
-					moduleData.trapeza_img && trapeza_img ? _react2.default.createElement('span', { className: 'calendar__trapeza_img', dangerouslySetInnerHTML: this.createMarkup((0, _htmlentity.decode)(moduleData.trapeza_img)) }) : null,
-					moduleData.trapeza_txt && trapeza_txt ? _react2.default.createElement('span', { className: 'calendar__trapeza-txt', dangerouslySetInnerHTML: this.createMarkup((0, _htmlentity.decode)(moduleData.trapeza_txt)) }) : null,
+					_react2.default.createElement(
+						'div',
+						{ className: 'orthodox-calendar__trapeza' },
+						moduleData.trapeza_img && trapeza_img ? _react2.default.createElement('div', { className: 'orthodox-calendar__trapeza-img', dangerouslySetInnerHTML: this.createMarkup((0, _htmlentity.decode)(moduleData.trapeza_img)) }) : null,
+						moduleData.trapeza_txt && trapeza_txt ? _react2.default.createElement('span', { className: 'orthodox-calendar__trapeza-txt', dangerouslySetInnerHTML: this.createMarkup((0, _htmlentity.decode)(moduleData.trapeza_txt)) }) : null
+					),
+					_react2.default.createElement('div', { className: 'clear' }),
 					_react2.default.createElement(
 						'div',
 						null,
+						moduleData.dayicon && dayicon ? _react2.default.createElement('div', { className: 'orthodox-calendar__dayicon', dangerouslySetInnerHTML: this.createMarkup((0, _htmlentity.decode)(moduleData.dayicon)) }) : null,
 						moduleData.para && para ? _react2.default.createElement('div', { className: 'orthodox-calendar__para', dangerouslySetInnerHTML: this.createMarkup((0, _htmlentity.decode)(moduleData.para)) }) : null,
 						moduleData.chten && chten ? _react2.default.createElement('div', { className: 'orthodox-calendar__chten', dangerouslySetInnerHTML: this.createMarkup((0, _htmlentity.decode)(moduleData.chten)) }) : null
 					)
